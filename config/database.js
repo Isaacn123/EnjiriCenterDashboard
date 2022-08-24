@@ -19,12 +19,9 @@ module.exports = ({ env }) => {
             password:config.password,
           },
           ssl: {
-            rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates
-          }
-        },
-        options: {
-          ssl: true //env.bool('DATABASE_SSL', true),
-        },
+            rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
+          },
+        }
       }
     }
   }
