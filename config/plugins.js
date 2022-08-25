@@ -23,22 +23,21 @@ module.exports = ({ env }) => {
       //   },
       // },
       upload:{
-        config:{
             provider:'cloudinary',
             providerOptions:{
                 cloud_name:env('CLOUDINARY_NAME'),
                 api_key: env('CLOUDINARY_KEY'),
                 api_secret: env('CLOUDINARY_SECRET'),
-                upload_preset: env('CLOUDINARY_UPLOAD_PRESET'),
-            },
-            actionOptions:{
-                upload:{},
-                uploadStream: {
-                   folder: "ENGIRICENTER",
-                },
-                delete:{},
+                // upload_preset: env('CLOUDINARY_UPLOAD_PRESET'),
+            
+            // actionOptions:{
+            //     upload:{},
+            //     uploadStream: {
+            //        folder: "ENGIRICENTER",
+            //     },
+            //     delete:{},
                 
-            },
+            // },
         },
     },
     }
