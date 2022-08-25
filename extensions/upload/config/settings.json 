@@ -1,0 +1,9 @@
+{
+  "provider": "cloudinary",
+  "providerOptions": {     
+    "cloud_name":"ivhfizons",
+    "api_key": "842755312754361",               
+    "api_secret":"BMO579r1fQKABRKoV3bHRbmd7e4"
+  }
+}
+
