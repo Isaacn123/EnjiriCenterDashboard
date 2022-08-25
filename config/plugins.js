@@ -12,11 +12,7 @@ module.exports = ({ env }) => ({
                 upload:{
                   folder: "ENGIRICENTER",
                 },
-                uploadStream: {
-                   folder: "ENGIRICENTER",
-                },
-                delete:{},
-                
+                delete:{},     
             },
     
     }
