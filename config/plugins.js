@@ -14,15 +14,33 @@ module.exports = ({ env }) => {
       //     },
       //   },
       // },
-      upload: {
-        provider: 'uploadcare',
-        providerOptions: {
-          public_key: env('UPLOADCARE_PUBLIC_KEY'),
-          secret_key: env('UPLOADCARE_SECRET_KEY'),
-          // base_cdn: env('UPLOADCARE_BASE_CDN'),
+      // upload: {
+      //   provider: 'uploadcare',
+      //   providerOptions: {
+      //     public_key: env('UPLOADCARE_PUBLIC_KEY'),
+      //     secret_key: env('UPLOADCARE_SECRET_KEY'),
+      //     // base_cdn: env('UPLOADCARE_BASE_CDN'),
+      //   },
+      // },
+      upload:{
+        config:{
+            provider:'cloudinary',
+            providerOptions:{
+                cloud_name:env('CLOUDINARY_NAME'),
+                api_key: env('CLOUDINARY_KEY'),
+                api_secret: env('CLOUDINARY_SECRET'),
+                upload_preset: env('CLOUDINARY_UPLOAD_PRESET'),
+            },
+            actionOptions:{
+                upload:{},
+                uploadStream: {
+                   folder: "ENGIRICENTER",
+                },
+                delete:{},
+                
+            },
         },
-      },
-      // ...
+    },
     }
   }
 
