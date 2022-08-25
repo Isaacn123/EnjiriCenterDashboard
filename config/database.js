@@ -3,9 +3,7 @@ const config = parse(process.env.DATABASE_URL);
 module.exports = ({ env }) => {
   
   if(env('NODE_ENV') === 'production'){
-    // const config = parse(process.env.DATABASE_URL);
-
-    return {
+  return {
       defaultConnection:'default',
       connections:{
         default:{
@@ -18,13 +16,13 @@ module.exports = ({ env }) => {
             username:config.user,
             password:config.password,
           },
-          options: {
-            ssl: false,
-          },
+          // options: {
+          //   ssl: false,
+          // },
         }
       }
     }
-  }
+  } else{
 
   return{
   defaultConnection: 'default',
@@ -40,5 +38,6 @@ module.exports = ({ env }) => {
       },
     },
   },
+}
 }
 };
