@@ -1963,6 +1963,14 @@
   dependencies:
     "@types/node" "*"
 
+"@uploadcare/upload-client@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@uploadcare/upload-client/-/upload-client-1.1.5.tgz#ebbafe58dc115dca46320d82c1193b32778e3a9c"
+  integrity sha512-ifQp3isX+PP6xO+Gh5AT0nvdY2y3eDvY1nDvAsIX+hmbGu7UUT3yfGVXXWqthzWl3RxgaESDw06oGtYfpyRMLA==
+  dependencies:
+    form-data "^3.0.0"
+    ws "^7.2.1"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -2730,7 +2738,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axios@^0.21.1:
+axios@^0.21.0, axios@^0.21.1:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -3549,7 +3557,7 @@ cloudinary-core@^2.10.2:
   resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.13.0.tgz#b59f90871b6c708c3d0735b9be47ac08181c57fb"
   integrity sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA==
 
-cloudinary@^1.30.1:
+cloudinary@^1.25.1, cloudinary@^1.30.1:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.30.1.tgz#eb63ae8460b93cdf8cd027573df11ea333fcb25a"
   integrity sha512-Vri+R4VZXZUQWJ3vOoB5b0vjigxI/INRhzZF8E0A1O07bBNrwWAvodtDyumIk3RvEcgxzjvnqq83CPqoUyzEtA==
@@ -11237,10 +11245,26 @@ strapi-provider-upload-aws-s3@^3.6.10:
     aws-sdk "2.892.0"
     lodash "4.17.21"
 
+strapi-provider-upload-cloudinary@^3.6.10:
+  version "3.6.10"
+  resolved "https://registry.yarnpkg.com/strapi-provider-upload-cloudinary/-/strapi-provider-upload-cloudinary-3.6.10.tgz#904eb4da440d04090c4af841cd0e2fdaa9820418"
+  integrity sha512-f0p2gn9jUCx1ofRE48NiV/T6jXQ9phPEdf5aHubWiBV5o+3dHwCYmODpzFdpEBle5XOOb2/A/Vhv0w/BWzUXww==
+  dependencies:
+    cloudinary "^1.25.1"
+    into-stream "^5.1.0"
+
 strapi-provider-upload-local@3.6.8:
   version "3.6.8"
   resolved "https://registry.yarnpkg.com/strapi-provider-upload-local/-/strapi-provider-upload-local-3.6.8.tgz#4666269e96f2ae878f366ae091d09ea69fb0237b"
   integrity sha512-GkedrjO+T4DN649Ak0SMSS5Vdta0AoZRt9+IWLO9TGLZ7hjtIjnB60kGf0fQKspIhbS7DUqtwuzQAXTd8fXJOg==
+
+strapi-provider-upload-uploadcare@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-upload-uploadcare/-/strapi-provider-upload-uploadcare-0.3.0.tgz#d085fe77d5d2fe642330db005d8dfde88208d936"
+  integrity sha512-RUsQSbeIKhcT/cK0oPiu05F7xn87wtUQLAzBRlDAgq/tvBGcQBpKODEC1PUxLeOXaFkXaJQWL/3sYF1zGtqfXA==
+  dependencies:
+    "@uploadcare/upload-client" "^1.1.5"
+    axios "^0.21.0"
 
 strapi-utils@3.6.10:
   version "3.6.10"
@@ -12536,7 +12560,7 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-"ws@^5.2.0 || ^6.0.0 || ^7.0.0":
+"ws@^5.2.0 || ^6.0.0 || ^7.0.0", ws@^7.2.1:
   version "7.5.9"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.9.tgz#54fa7db29f4c7cec68b1ddd3a89de099942bb591"
   integrity sha512-F+P9Jil7UiSKSkppIiD94dN07AwvFixvLIj1Og1Rl9GGMuNipJnV9JzjD6XuqmAeiswGvUmNLjr5cFuXwNS77Q==
