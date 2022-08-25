@@ -1,3 +1,3 @@
-# Strapi application
+# Enjiri Center application
 
-A quick description of your strapi application
+A quick description of Enjiri Center application
